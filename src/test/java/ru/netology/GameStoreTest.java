@@ -54,11 +54,11 @@ public class GameStoreTest {
         store.addPlayTime("Anna", 5);
         store.addPlayTime("Olga", 12);
         store.addPlayTime("Oleg", 2);
-        store.addPlayTime("Olga", -4);
+        store.addPlayTime("Olga", -8);
 
 
         String actual = store.getMostPlayer();
-        String expected = "Olga";
+        String expected = "Anna";
         assertEquals(expected, actual);
 
     }
