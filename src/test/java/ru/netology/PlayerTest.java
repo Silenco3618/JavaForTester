@@ -19,16 +19,12 @@ public class PlayerTest {
         assertEquals(expected, actual);
     }
 
-    @Test // тест №4. Считает количество часов, которое играли в игру, если она УСТАНОВЛЕНА
-
+    @Test
     public void shouldCountHoursWhenGameInstalled() { //количество часов, если игра установлена
 
         GameStore store = new GameStore();
-
         Player player = new Player("Petya");
-
         Game game = store.publishGame("Нетология Баттл Онлайн", "Аркады");
-
         player.installGame(game);
 
         int actual = player.play(game, 3);
@@ -53,7 +49,6 @@ public class PlayerTest {
     public void allSumHoursGame() { // суммирует время, проигранное во
                                     // все игры одного жанра этим игроком
         GameStore store = new GameStore();
-
         Player player = new Player("Petya");
 
         Game game1 = store.publishGame("Нетология Баттл Онлайн", "Аркады");
@@ -97,14 +92,10 @@ public class PlayerTest {
         assertEquals(expected, actual);
     }
 
-    @Test // тест №6.  Выдает игру заданного жанра "Аркады",
-    // в которую играли бОльшее количество часов если играли только в игры одного жанра
-
+    @Test
     public void theBiggestSumHoursIfOnceGenreGames() { //большее количество часов
                                                   //несколько игр одного жанра
-
         GameStore store = new GameStore();
-
         Player player = new Player("Petya");
 
         Game game1 = store.publishGame("Нетология Баттл Онлайн", "Аркады");
@@ -149,9 +140,7 @@ public class PlayerTest {
 
     @Test
     public void ifNotToPlay() { //выдает  null, если не играли в этот жанр
-
         GameStore store = new GameStore();
-
         Player player = new Player("Petya");
 
         Game game1 = store.publishGame("Нетология Баттл Онлайн", "Аркады");
@@ -159,7 +148,6 @@ public class PlayerTest {
 
         player.installGame(game1);
         player.installGame(game2);
-
         player.play(game1, 5);
         player.play(game2, 1);
 
