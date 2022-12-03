@@ -48,6 +48,22 @@ public class GameStoreTest {
     }
 
     @Test
+    public void theBiggestTime1() {
+        GameStore store = new GameStore();
+
+        store.addPlayTime("Anna", 5);
+        store.addPlayTime("Olga", 12);
+        store.addPlayTime("Oleg", 2);
+        store.addPlayTime("Olga", -4);
+
+
+        String actual = store.getMostPlayer();
+        String expected = "Olga";
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
     public void theBiggestTimeZero() {
         GameStore store = new GameStore();
 
