@@ -107,9 +107,9 @@ public class PlayerTest {
         player.play(game1, 5);
         player.play(game2, 1);
 
-        Game expected = game1 ;
-        Game actual = player.mostPlayerByGenre(game1.getGenre());
-        assertEquals(expected, actual);
+        Game[] expected = {game1};
+        Game[] actual = player.mostPlayerByGenre("Аркады");
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -130,10 +130,10 @@ public class PlayerTest {
         player.play(game2, 1);
         player.play(game3, 7);
 
-        Game expected = game3;
-        Game actual =  player.mostPlayerByGenre(game3.getGenre());
+        Game[] expected = {game1};
+        Game[] actual = player.mostPlayerByGenre("Аркады");
 
-        assertEquals(expected, actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -151,5 +151,4 @@ public class PlayerTest {
 
         assertNull(player.mostPlayerByGenre("Гонки"));
     }
-
 }
