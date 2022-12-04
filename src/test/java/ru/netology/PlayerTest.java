@@ -19,9 +19,5 @@ public class PlayerTest {
         assertEquals(expected, actual);
     }
 
-
-
-
-
     // другие ваши тесты
 }
