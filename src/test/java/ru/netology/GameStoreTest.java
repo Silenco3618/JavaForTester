@@ -56,6 +56,47 @@ public class GameStoreTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test // время 1 час
+    public void MostPlayerOne() {
+
+        GameStore store = new GameStore();
+
+        store.addPlayTime("1", 1);
+
+        String[] expected = {"1"};
+        String[] actual = store.getMostPlayer();
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test // время игры 0
+    public void MostPlayerZero() {
+
+        GameStore store = new GameStore();
+
+        store.addPlayTime("1", 0);
+
+        String[] expected = null;
+        String[] actual = store.getMostPlayer();
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test // самое большое время из игроков, если у всех 0
+    public void MostPlayerTimeZero() {
+
+        GameStore store = new GameStore();
+
+        store.addPlayTime("1", 0);
+        store.addPlayTime("2", 0);
+        store.addPlayTime("3", 0);
+
+        String[] expected = null;
+        String[] actual = store.getMostPlayer();
+
+        assertArrayEquals(expected, actual);
+    }
+
     @Test // сумма времени всех игроков
     public void SumPlayedTime() {
         GameStore store = new GameStore();
@@ -65,6 +106,32 @@ public class GameStoreTest {
         store.addPlayTime("3", 18);
 
         int expected = 53;
+        int actual = store.getSumPlayedTime();
+        assertEquals(expected, actual);
+    }
+
+    @Test // сумма времени всех игроков с 0 часами
+    public void SumPlayedTimeZero() {
+        GameStore store = new GameStore();
+
+        store.addPlayTime("1", 0);
+        store.addPlayTime("2", 0);
+        store.addPlayTime("3", 18);
+
+        int expected = 18;
+        int actual = store.getSumPlayedTime();
+        assertEquals(expected, actual);
+    }
+
+    @Test // сумма времени всех игроков, у всех 0 часов
+    public void SumPlayedTimeZeroAll() {
+        GameStore store = new GameStore();
+
+        store.addPlayTime("1", 0);
+        store.addPlayTime("2", 0);
+        store.addPlayTime("3", 0);
+
+        int expected = 0;
         int actual = store.getSumPlayedTime();
         assertEquals(expected, actual);
     }
