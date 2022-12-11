@@ -1,5 +1,5 @@
+package ru.netology;
 
-<<<<<<< HEAD
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
@@ -19,8 +19,6 @@ public class PlayerTest {
         assertEquals(expected, actual);
     }
 
-
-    // другие ваши тесты
     @Test
     public void shouldCountHoursWhenGameInstalled() {
 
@@ -107,21 +105,9 @@ public class PlayerTest {
         player.play(game1, 5);
         player.play(game2, 1);
 
-<<<<<<< HEAD
         Game[] expected = {game1};
         Game[] actual = player.mostPlayerByGenre("Аркады");
         assertArrayEquals(expected, actual);
-=======
-<<<<<<< HEAD
-        Game[] expected = {game1};
-        Game[] actual = player.mostPlayerByGenre("Аркады");
-        assertArrayEquals(expected, actual);
-=======
-        Game expected = game1 ;
-        Game actual = player.mostPlayerByGenre(game1.getGenre());
-        assertEquals(expected, actual);
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
->>>>>>> branch_player
     }
 
     @Test
@@ -142,23 +128,10 @@ public class PlayerTest {
         player.play(game2, 1);
         player.play(game3, 7);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> branch_player
         Game[] expected = {game1};
         Game[] actual = player.mostPlayerByGenre("Аркады");
 
         assertArrayEquals(expected, actual);
-<<<<<<< HEAD
-=======
-=======
-        Game expected = game3;
-        Game actual =  player.mostPlayerByGenre(game3.getGenre());
-
-        assertEquals(expected, actual);
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
->>>>>>> branch_player
     }
 
     @Test
@@ -174,25 +147,7 @@ public class PlayerTest {
         player.play(game1, 5);
         player.play(game2, 1);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> branch_player
-        Game[] expected = {game1};
-        Game[] actual = player.mostPlayerByGenre("Аркады");
-
-        assertArrayEquals(expected, actual);
-    }
-<<<<<<< HEAD
-}
-=======
-}
-=======
         assertNull(player.mostPlayerByGenre("Гонки"));
     }
-
 }
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
->>>>>>> branch_player
-=======
->>>>>>> branch_gamestore
+

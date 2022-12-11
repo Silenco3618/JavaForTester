@@ -1,5 +1,5 @@
+package ru.netology;
 
-<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,15 +41,7 @@ public class Player {
         if (playedTime.containsKey(game)) {
             playedTime.put(game, playedTime.get(game) + hours);
         } else {
-<<<<<<< HEAD
             throw new RuntimeException("Игра не установлена");
-=======
-<<<<<<< HEAD
-            throw new RuntimeException("Игра не установлена");
-=======
-            throw  new RuntimeException("Игра не установлена");
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
->>>>>>> branch_player
         }
         return playedTime.get(game);
     }
@@ -68,24 +60,11 @@ public class Player {
         }
         return sum;
     }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> branch_player
     /**
      * Метод принимает жанр и возвращает игру этого жанра, в которую играли больше всего
      * Если в игры этого жанра не играли, возвращается null
      */
     public Game[] mostPlayerByGenre(String genre) {
-<<<<<<< HEAD
-=======
-=======
-    /** Метод принимает жанр и возвращает игру этого жанра, в которую играли больше всего
-     Если в игры этого жанра не играли, возвращается null */
-    public Game mostPlayerByGenre(String genre) {
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
->>>>>>> branch_player
 
         int maxTime = 0;
         Game maxGame = null;
@@ -98,16 +77,6 @@ public class Player {
                 }
             }
         }
-<<<<<<< HEAD
         return new Game[]{maxGame};
-=======
-<<<<<<< HEAD
-        return new Game[]{maxGame};
-=======
-        return maxGame;
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
->>>>>>> branch_player
     }
 }
-=======
->>>>>>> branch_gamestore

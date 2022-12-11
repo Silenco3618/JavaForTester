@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package ru.netology;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,7 +14,6 @@ public class GameStoreTest {
         assertTrue(store.containsGame(game1));
     }
 
-<<<<<<< HEAD
     @Test //добавление всех игр
     public void AddAllGame() {
         Game game1 = store.publishGame("Нетология Баттл Онлайн", "Аркады");
@@ -138,17 +135,5 @@ public class GameStoreTest {
         int actual = store.getSumPlayedTime();
         assertEquals(expected, actual);
     }
-<<<<<<< HEAD
-}
-=======
-    // другие ваши тесты
-
-
 
 }
-
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
->>>>>>> branch_player
-=======
-}
->>>>>>> branch_gamestore
