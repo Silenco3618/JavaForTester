@@ -41,7 +41,11 @@ public class Player {
         if (playedTime.containsKey(game)) {
             playedTime.put(game, playedTime.get(game) + hours);
         } else {
+<<<<<<< HEAD
             throw new RuntimeException("Игра не установлена");
+=======
+            throw  new RuntimeException("Игра не установлена");
+>>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
         }
         return playedTime.get(game);
     }
@@ -61,11 +65,17 @@ public class Player {
         return sum;
     }
 
+<<<<<<< HEAD
     /**
      * Метод принимает жанр и возвращает игру этого жанра, в которую играли больше всего
      * Если в игры этого жанра не играли, возвращается null
      */
     public Game[] mostPlayerByGenre(String genre) {
+=======
+    /** Метод принимает жанр и возвращает игру этого жанра, в которую играли больше всего
+     Если в игры этого жанра не играли, возвращается null */
+    public Game mostPlayerByGenre(String genre) {
+>>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
 
         int maxTime = 0;
         Game maxGame = null;
@@ -78,6 +88,10 @@ public class Player {
                 }
             }
         }
+<<<<<<< HEAD
         return new Game[]{maxGame};
+=======
+        return maxGame;
+>>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
     }
 }
