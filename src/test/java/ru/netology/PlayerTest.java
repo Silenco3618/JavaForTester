@@ -19,8 +19,6 @@ public class PlayerTest {
         assertEquals(expected, actual);
     }
 
-
-    // другие ваши тесты
     @Test
     public void shouldCountHoursWhenGameInstalled() {
 
@@ -107,15 +105,9 @@ public class PlayerTest {
         player.play(game1, 5);
         player.play(game2, 1);
 
-<<<<<<< HEAD
-        Game[] expected = {game1};
-        Game[] actual = player.mostPlayerByGenre("Аркады");
-        assertArrayEquals(expected, actual);
-=======
-        Game expected = game1 ;
-        Game actual = player.mostPlayerByGenre(game1.getGenre());
+        Game expected = game1;
+        Game actual = player.mostPlayerByGenre("Аркады");
         assertEquals(expected, actual);
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
     }
 
     @Test
@@ -136,17 +128,10 @@ public class PlayerTest {
         player.play(game2, 1);
         player.play(game3, 7);
 
-<<<<<<< HEAD
-        Game[] expected = {game1};
-        Game[] actual = player.mostPlayerByGenre("Аркады");
-
-        assertArrayEquals(expected, actual);
-=======
-        Game expected = game3;
-        Game actual =  player.mostPlayerByGenre(game3.getGenre());
+        Game expected = game1;
+        Game actual = player.mostPlayerByGenre(game2.getGenre());
 
         assertEquals(expected, actual);
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
     }
 
     @Test
@@ -162,16 +147,8 @@ public class PlayerTest {
         player.play(game1, 5);
         player.play(game2, 1);
 
-<<<<<<< HEAD
-        Game[] expected = {game1};
-        Game[] actual = player.mostPlayerByGenre("Аркады");
-
-        assertArrayEquals(expected, actual);
+        Game expected = null;
+        Game actual = player.mostPlayerByGenre("гонки");
+        assertEquals(expected, actual);
     }
 }
-=======
-        assertNull(player.mostPlayerByGenre("Гонки"));
-    }
-
-}
->>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
