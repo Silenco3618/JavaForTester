@@ -1,5 +1,5 @@
-package ru.netology;
 
+<<<<<<< HEAD
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
@@ -194,3 +194,5 @@ public class PlayerTest {
 }
 >>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
 >>>>>>> branch_player
+=======
+>>>>>>> branch_gamestore

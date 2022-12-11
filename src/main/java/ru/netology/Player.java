@@ -1,5 +1,5 @@
-package ru.netology;
 
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
@@ -109,3 +109,5 @@ public class Player {
 >>>>>>> branch_player
     }
 }
+=======
+>>>>>>> branch_gamestore

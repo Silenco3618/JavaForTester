@@ -138,6 +138,7 @@ public class GameStoreTest {
         int actual = store.getSumPlayedTime();
         assertEquals(expected, actual);
     }
+<<<<<<< HEAD
 }
 =======
     // другие ваши тесты
@@ -148,3 +149,6 @@ public class GameStoreTest {
 
 >>>>>>> 966bcb039dae4b2610b9df863fcd1fed60722e39
 >>>>>>> branch_player
+=======
+}
+>>>>>>> branch_gamestore
